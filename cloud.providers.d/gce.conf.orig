@@ -1,0 +1,43 @@
+gce-us-central1-a:
+  driver: gce
+  project: 'example.com:myproject'
+  ssh_username: myuser
+  ssh_keyfile: /root/mykey.pem
+  service_account_email_address: '012345678901-abcdef0123456789abcdef0123456789@developer.gserviceaccount.com'
+  service_account_private_key: '/etc/salt/gce/mykey.pem'
+
+gce-us-central1-b:
+  - extends: gce-us-central11a:gce
+    location: gce-us-central1-b
+
+gce-us-central1-c:
+  - extends: gce-us-central11a:gce
+    location: gce-us-central1-c
+
+gce-us-central1-f:
+  - extends: gce-us-central11a:gce
+    location: gce-us-central1-f
+
+gce-asia-east1-a:
+  - extends: gce-us-central11a:gce
+    location: gce-asia-east1-a
+
+gce-asia-east1-b:
+  - extends: gce-us-central11a:gce
+    location: gce-asia-east1-b
+
+gce-asia-east1-c:
+  - extends: gce-us-central11a:gce
+    location: gce-asia-east1-c
+
+gce-europe-west1-b:
+  - extends: gce-us-central11a:gce
+    location: gce-europe-west1-b
+
+gce-europe-west1-c:
+  - extends: gce-us-central11a:gce
+    location: gce-europe-west1-c
+
+gce-europe-west1-d:
+  - extends: gce-us-central11a:gce
+    location: gce-europe-west1-d
